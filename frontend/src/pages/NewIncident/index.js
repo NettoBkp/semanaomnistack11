@@ -45,23 +45,26 @@ export default function NewIncident(){
                     Voltar para profile
                 </Link>
             </section>
-            <form onSubmit={handleNewIncident}>
+            <form >
                 <input placeholder="Título do caso" 
+                required=''
                 value={title}
                 onChange={e => setTitle(e.target.value)}                
                 />
                 <textarea placeholder="Descrição" 
+                required=""
                 value={description}
                 onChange={e => setDescription(e.target.value)}                
                 />
                 <div className="input-group">
                 <input placeholder="Valor em Reais" 
+                required=""
                 value={value}
                 onChange={e => setValue(e.target.value)}                    
                 />
                     
                 </div>
-                <button className="button" type="submit"> Cadastrar </button>
+                <button onClick={handleNewIncident} className="button" type="submit"> Cadastrar </button>
             </form>
         </div>
     </div>

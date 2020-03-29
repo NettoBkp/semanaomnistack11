@@ -44,7 +44,7 @@ export default function Register() {
                         Voltar
                     </Link>
                 </section>
-                <form onSubmit={handleRegister}>
+                <form >
                     <input placeholder="Nome da Ong"
                         value={name}
                         required=""
@@ -74,7 +74,7 @@ export default function Register() {
                             onChange={e => setUf(e.target.value)}
                         />
                     </div>
-                    <button className="button" type="submit"> Cadastrar </button>
+                    <button onClick={handleRegister} className="button" type="submit"> Cadastrar </button>
                 </form>
             </div>
         </div>
